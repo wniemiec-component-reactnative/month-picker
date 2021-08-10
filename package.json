@@ -1,0 +1,26 @@
+{
+  "name": "@wniemiec-component-reactnative/month-picker",
+  "version": "1.0.0",
+  "description": "Month selector.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wniemiec-components-reactnative/month-picker.git"
+  },
+  "keywords": [
+    "wniemiec",
+    "component",
+    "reactnative",
+    "month-picker",
+    "month",
+    "picker",
+    "month-scroller",
+    "scroller"
+  ],
+  "author": "William Niemiec <williamniemiec@hotmail.com> (https://www.linkedin.com/in/williamniemiec)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wniemiec-components-reactnative/month-picker/issues"
+  },
+  "homepage": "https://github.com/wniemiec-components-reactnative/month-picker#readme"
+}
