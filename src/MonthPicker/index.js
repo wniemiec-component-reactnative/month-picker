@@ -101,6 +101,7 @@ export default function MonthPicker({
           selected={selectedMonth == index}
           bgColor={bgColor}
           fgColor={fgColor}
+          width={MONTH_WIDTH}
         />
       ))}
     </ScrollView>

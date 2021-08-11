@@ -8,17 +8,17 @@
  * @format
  */
 
-import React, { useRef, useLayoutEffect } from 'react';
-import { Dimensions, ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-export default function Month({ key, month, onPress, selected, bgColor, fgColor }) {
+export default function Month({ month, onPress, selected, bgColor, fgColor, width }) {
   return (
     <MonthButton
-      key={key}
       onPress={onPress}
       selected={selected}
-      fgColor={bgColor}
+      bgColor={bgColor}
+      width={width}
     >
       <Text style={buildMonthTextStyle(fgColor)}>
         {month}
@@ -27,12 +27,11 @@ export default function Month({ key, month, onPress, selected, bgColor, fgColor 
   );
 }
 
-function MonthButton({ children, key, onPress, selected, bgColor }) {
+function MonthButton({ children, onPress, selected, bgColor, width }) {
   return (
     <TouchableOpacity
-      key={key}
       onPress={onPress}
-      style={buildMonthButtonStyle()}
+      style={buildMonthButtonStyle(width)}
     >
       <View style={buildMonthButtonAreaStyle(selected, bgColor)}>
         {children}
@@ -41,10 +40,10 @@ function MonthButton({ children, key, onPress, selected, bgColor }) {
   );
 }
 
-function buildMonthButtonStyle() {
+function buildMonthButtonStyle(width) {
   return [
     styles.monthButton,
-    { width: MONTH_WIDTH - 20 }
+    { width: width - 20 }
   ];
 }
 
