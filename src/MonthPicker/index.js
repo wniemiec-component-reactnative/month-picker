@@ -38,13 +38,13 @@ const MONTHS = [
  * @param    {function(void): void} setSelectedMonth function that changes the 
  * selected month after a month is selected in the selector  
  * @param    {string} [fgColor='#FFFFFF'] Text color
- * @param    {string} [bgColorActive='#233287'] Background color
+ * @param    {string} [bgColor='#233287'] Background color
  */
 export default function MonthPicker({
   selectedMonth, 
   setSelectedMonth, 
   fgColor='#FFFFFF', 
-  bgColorActive='#233287'
+  bgColor='#233287'
 }) {
   const monthRef = useRef();
   
@@ -99,7 +99,7 @@ export default function MonthPicker({
           month={month}
           onPress={() => handleSelectMonth(index)}
           selected={selectedMonth == index}
-          bgColor={bgColorActive}
+          bgColor={bgColor}
           fgColor={fgColor}
         />
       ))}
